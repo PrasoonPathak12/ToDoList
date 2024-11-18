@@ -1,0 +1,212 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.display{
+  width: 100vw;
+  height: 100vh;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+}
+.heading{
+  text-align: center;
+  /* background-color: red; */
+  width: 60%;
+  margin-bottom: 10vh;
+  font-size: 30px;
+}
+.displayToDo{
+  margin-top: 10vh;
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* background-color: azure; */
+}
+.todoitem{
+  width: 80%;
+  height: 50%;
+  /* background-color: blue; */
+  /* overflow: hidden; */
+  /* overflow: auto; */
+}
+.todolist{
+  width: 100%;
+  /* margin-top: 30px; */
+  height: 85%;
+  /* background-color: red; */
+  /* overflow: auto; */
+}
+
+/* FORM TODO INPUT */
+
+form{
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+  height: auto;
+}
+.ToDoInput_Div{
+  width: 80%;
+}
+.ToDoInput_Div input{
+  width: 100%;
+  padding: 8px;
+  font-size: 2vh;
+}
+.AddToDoButton{
+  width: 20%;
+  height: 100%;
+}
+
+.AddToDoButton input{
+  position: relative;
+  padding: 8px;
+  width: 80%;
+  left: 20%;
+}
+
+.todocollection{
+  width: 100%;
+  height: auto;
+  /* background-color: black; */
+}
+.singleTodo{
+  width: 90%;
+  height: auto;
+  padding: 1vh;
+  margin-top: 1vh ;
+  margin-bottom: 2vh;
+  /* color: white; */
+}
+.allButtons{
+  width: 50%;
+  height: auto;
+  display: flex;
+  margin-top: 1vh;
+}
+.allButtons button{
+  padding: 4px;
+  margin-right: 20px;
+  
+}
+.isRed{
+  background:linear-gradient( to right,rgb(244, 97, 97),red);
+  padding: 2px;
+  font-size: 1.2em;
+  width: 100%;
+}
+.isGreen{
+  background:linear-gradient( to right,rgb(175, 244, 114),rgb(95, 233, 53));
+  padding: 2px;
+  font-size: 1.2em;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .displayToDo {
+    width: 85%; /* Use more space on smaller screens */
+    max-width: none;
+    padding: 20px;
+  }
+
+  .todoitem {
+    width: 100%;
+  }
+
+  .singleTodo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ToDoInput_Div input {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .AddToDoButton{
+    height: 49.6px;
+  }
+  .AddToDoButton input {
+    /* height: 49.6px; */
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    padding: 3px;
+  }
+
+  .singleTodo p {
+    font-size: 18px;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* Further mobile responsiveness */
+@media (max-width: 480px) {
+
+  .todoitem{
+    width: 100%;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .heading{
+    font-size: 24px;
+  }
+
+  .ToDoInput_Div input {
+    font-size: 15px;
+    padding: 4px;
+    width: 120%;
+  }
+  .AddToDoButton{
+    width: 00px;
+  }
+  .addInput {
+    font-size: 6px;
+    padding: 0;
+  }
+
+  .singleTodo p {
+    font-size: 18px;
+  }
+
+  .singleTodo {
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  button {
+    font-size: 15px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .displayToDo {
+    width: 85%; /* Use more space on smaller screens */
+    max-width: none;
+    padding: 10px;
+  }
+
+  .ToDoInput_Div{
+    width: 80%;
+  }
+  .AddToDoButton input{
+    padding: 3px;
+    width: 80px;
+    font-size: 14px;
+    height: 34.4px;
+  }
+}
