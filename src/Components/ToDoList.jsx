@@ -8,11 +8,15 @@ function ToDoList(props) {
         () => {
             setIsStyled(new Array(todos.length).fill(false))
         }
-        , [todos]);
+        , []);
 
     const handleDelete = (index) => {
         const updatedTodos = todos.filter((todo, i) => i !== index);
         setTodos(updatedTodos);
+
+        const updateInStyled = [...isStyled];
+        updateInStyled.splice(index,1);
+        setIsStyled(updateInStyled);
     }
     const handleTodoStatus = (index) => {
         const updatedIsStyled = [...isStyled];
